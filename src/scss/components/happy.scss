@@ -1,0 +1,48 @@
+.happy {
+  padding: 110px 0px;
+  background-color: var(--merlin);
+  color: white !important;
+  @include laptop {
+    padding: 60px 0px;
+  }
+  &__container {
+    @include flex-between;
+    @include laptop {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+  &__info {
+    max-width: 460px;
+    @include laptop {
+      max-width: none;
+      text-align: center;
+    }
+  }
+  &__subtitle {
+    color: currentColor !important;
+  }
+  &__descr {
+    margin: 14px 0px 0px 0px;
+    font-size: 15px;
+    line-height: 160%;
+  }
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 350px;
+    row-gap: 90px;
+    justify-content: space-between;
+    @include laptop {
+      gap: 25px;
+      max-width: none;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+  &__logo {
+    width: 130px;
+  }
+}

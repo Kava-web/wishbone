@@ -12,11 +12,20 @@
 @import "./ui/button";
 @import "./ui/list";
 
+// help-components
+
+@import "./help-components/section-poster";
+
 // components
 @import "./components/header";
 
 @import "./components/hero";
 @import "./components/our-firm";
 @import "./components/reeding-house";
+@import "./components/our-process";
+@import "./components/lader";
+@import "./components/happy";
+@import "./components/staircase";
+@import "./components/projects";
 
 @import "./components/footer";

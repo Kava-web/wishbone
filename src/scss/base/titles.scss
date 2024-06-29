@@ -25,4 +25,11 @@
       font-size: 32px;
     }
   }
+  &.title-3 {
+    font-size: 32px;
+    line-height: 119%;
+    @include laptop {
+      font-size: 26px;
+    }
+  }
 }

@@ -1,0 +1,50 @@
+.our-process {
+  padding: 100px 0px;
+  @include laptop {
+    padding: 60px 0px;
+  }
+  &__subtitle {
+    text-align: center;
+  }
+  &__title {
+    text-align: center;
+    margin-top: 15px;
+  }
+  &__info {
+    margin: 40px auto 0px auto;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    @include laptop {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  &__info-item {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__info-icon {
+    width: 115px;
+    height: 100px;
+    color: var(--merlin);
+  }
+  &__info-title {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 144%;
+    text-align: center;
+    color: var(--merlin);
+  }
+  &__info-descr {
+    max-width: 295px;
+    margin: 10px 0px 0px 0px;
+    font-size: 15px;
+    line-height: 160%;
+    text-align: center;
+    color: var(--pine-cone);
+  }
+}
