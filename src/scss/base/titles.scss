@@ -1,0 +1,28 @@
+.title {
+  margin: 0;
+  font-weight: 400;
+  &.subtitle {
+    color: var(--pine-cone);
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  &.title-1 {
+    font-size: 64px;
+    line-height: 110%;
+    @include desktop {
+      font-size: 54px;
+    }
+    @include laptop {
+      font-size: 46px;
+    }
+  }
+  &.title-2 {
+    font-size: 39px;
+    line-height: 108%;
+    @include laptop {
+      font-size: 32px;
+    }
+  }
+}

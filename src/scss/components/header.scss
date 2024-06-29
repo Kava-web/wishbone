@@ -1,4 +1,10 @@
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: white;
   &__container {
     @include flex-between;
     padding: 20px 15px;
@@ -22,6 +28,7 @@
       transform: translateX(400px);
       opacity: 0;
       z-index: -1;
+      padding-top: 10px;
       background-color: white;
       transition: transform 0.5s ease, opacity 0.5s ease;
       &.open {
@@ -45,11 +52,9 @@
         width: 100%;
       }
       &-close {
-        position: fixed;
-        top: 10px;
-        right: 10px;
+        position: relative;
         display: block;
-        margin-left: auto;
+        margin: 0px 10px 0px auto;
         span {
           position: absolute;
           display: block;
@@ -64,8 +69,6 @@
         }
       }
     }
-  }
-  &__nav-btn-span {
   }
   &__nav-list {
     display: flex;

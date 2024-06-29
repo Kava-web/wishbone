@@ -1,0 +1,53 @@
+.our-film {
+  padding: 100px 0px;
+  @include laptop {
+    padding: 60px 0px;
+  }
+  &__container {
+    max-width: 800px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    @include laptop {
+      display: block;
+    }
+  }
+  &__content {
+    max-width: 500px;
+    @include laptop {
+      max-width: none;
+    }
+  }
+  &__title {
+    @include laptop {
+      text-align: center;
+    }
+  }
+  &__descr {
+    margin: 0;
+    color: var(--merlin);
+    font-size: 16px;
+    line-height: 150%;
+    @include laptop {
+      margin-top: 20px;
+    }
+  }
+  &__profile {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__profile-img {
+    width: 84px;
+  }
+  &__profile-name {
+    font-size: 17px;
+    line-height: 153%;
+  }
+  &__profile-post {
+    margin: 0;
+    font-size: 14px;
+    color: var(--pine-cone);
+  }
+}
