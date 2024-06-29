@@ -1,0 +1,22 @@
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  padding: 0;
+  &.btn-black {
+    cursor: pointer;
+    background-color: var(--black);
+    border: none;
+    border-radius: 14px;
+    padding: 10px 19px;
+    border: 1px solid var(--black);
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.2s, color 0.2s;
+    @include hover {
+      color: var(--black);
+      background-color: transparent;
+    }
+  }
+}

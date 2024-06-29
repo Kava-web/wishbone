@@ -1,0 +1,125 @@
+.header {
+  &__container {
+    @include flex-between;
+    padding: 20px 15px;
+    @include tablet {
+      padding: 10px;
+    }
+  }
+  &__logo {
+    width: 220px;
+    @include laptop {
+      width: 195px;
+    }
+  }
+  &__nav {
+    @include tablet {
+      position: fixed;
+      overflow-y: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      transform: translateX(400px);
+      opacity: 0;
+      z-index: -1;
+      background-color: white;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      &.open {
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 100;
+      }
+    }
+  }
+  &__nav-btn {
+    display: none;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      span {
+        background-color: var(--black);
+        height: 2px;
+        width: 100%;
+      }
+      &-close {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: block;
+        margin-left: auto;
+        span {
+          position: absolute;
+          display: block;
+          width: 30px;
+          height: 2px;
+          &:first-child {
+            transform: rotate(45deg);
+          }
+          &:last-child {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+  &__nav-btn-span {
+  }
+  &__nav-list {
+    display: flex;
+    gap: 30px;
+    a {
+      position: relative;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 160%;
+      &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        height: 1px;
+        background-color: var(--black);
+        transition:
+          right 0.2s,
+          left 0.2s;
+      }
+      @include hover {
+        &::after {
+          right: 0;
+          left: 0;
+        }
+      }
+
+      &.btn {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    @include laptop {
+      gap: 15px;
+    }
+    @include tablet {
+      flex-direction: column;
+      align-items: start;
+      padding: 20px 40px;
+    }
+  }
+  &__nav-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--black);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 90;
+    &.active {
+      opacity: 0.3;
+      visibility: visible;
+    }
+  }
+}

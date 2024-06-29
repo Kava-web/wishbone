@@ -1,0 +1,16 @@
+:root {
+  --content-width: 1150px;
+  --offset-width: 15px;
+  --container-width: calc(var(--content-width) + (var(--offset-width) * 2));
+}
+
+.container {
+  max-width: var(--container-width);
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  @include tablet {
+    max-width: none;
+    padding: 0 20px;
+  }
+}
