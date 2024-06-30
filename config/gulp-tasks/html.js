@@ -1,5 +1,5 @@
 import versionNumber from "gulp-version-number";
-// import webpHtmlNosvg from "gulp-webp-html-nosvg";
+import webpHtmlNosvg from "gulp-webp-html-nosvg";
 
 export const html = () => {
 	return app.gulp.src(`${app.path.build.html}*.html`)
