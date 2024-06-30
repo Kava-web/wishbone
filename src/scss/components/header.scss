@@ -74,6 +74,7 @@
   }
   &__nav-list {
     display: flex;
+    align-items: center;
     gap: 30px;
     a {
       position: relative;
