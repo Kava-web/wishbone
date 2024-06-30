@@ -1,0 +1,21 @@
+.subscription {
+  padding: 100px 0px;
+  background-color: var(--silver-rust);
+  @include laptop {
+    padding: 60px 0px;
+  }
+  &__container {
+    @include flex-between;
+    @include tablet {
+      flex-direction: column;
+      row-gap: 25px;
+      align-items: start;
+    }
+  }
+  &__info {
+    max-width: 575px;
+    @include laptop {
+      max-width: 460px;
+    }
+  }
+}

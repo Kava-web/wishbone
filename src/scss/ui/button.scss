@@ -1,11 +1,9 @@
 .btn {
   cursor: pointer;
   background-color: transparent;
-  color: transparent;
   border: none;
   padding: 0;
   &.btn-black {
-    cursor: pointer;
     background-color: var(--black);
     border: none;
     border-radius: 14px;
@@ -13,10 +11,26 @@
     border: 1px solid var(--black);
     color: white;
     font-size: 16px;
-    transition: background-color 0.2s, color 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
     @include hover {
       color: var(--black);
       background-color: transparent;
+    }
+  }
+  &.btn-transparent {
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    border-radius: 14px;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      background-color: var(--black);
+      color: white;
     }
   }
 }

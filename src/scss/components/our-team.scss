@@ -1,0 +1,61 @@
+.our-team {
+  padding: 100px 0px;
+  @include laptop {
+    padding: 60px 0px;
+  }
+  &__container {
+    display: flex;
+    gap: 15px;
+    @include laptop {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  &__info {
+  }
+  &__descr {
+    margin: 15px 0px 0px 0px;
+    max-width: 360px;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--pine-cone);
+  }
+  &__btn {
+    display: inline-block;
+    margin-top: 30px;
+  }
+  &__profiles {
+    flex: 1;
+  }
+  &__profiles-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 35px;
+  }
+  &__profile {
+    flex: 0 1 50%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include tablet {
+      gap: 15px;
+    }
+  }
+  &__profile-img {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+  }
+  &__profile-info {
+  }
+  &__profile-name {
+    font-size: 17px;
+    line-height: 153%;
+  }
+  &__profile-post {
+    font-size: 14px;
+    color: var(--pine-cone);
+    margin: 0;
+  }
+}
