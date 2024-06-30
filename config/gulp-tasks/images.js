@@ -1,4 +1,4 @@
-import webp from "gulp-webp";
+// import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
 
 export const WebP = () => {
@@ -10,18 +10,18 @@ export const WebP = () => {
 			}))
 		)
 		.pipe(app.plugins.newer(app.path.build.images))
-		.pipe(
-			app.plugins.if(
-				app.isWebP,
-				webp()
-			)
-		)
-		.pipe(
-			app.plugins.if(
-				app.isWebP,
-				app.gulp.dest(app.path.build.images)
-			)
-		)
+		// .pipe(
+		// 	app.plugins.if(
+		// 		app.isWebP,
+		// 		webp()
+		// 	)
+		// )
+		// .pipe(
+		// 	app.plugins.if(
+		// 		app.isWebP,
+		// 		app.gulp.dest(app.path.build.images)
+		// 	)
+		// )
 }
 export const imagesOptimize = () => {
 	return app.gulp.src(app.path.src.images, { encoding: false })
